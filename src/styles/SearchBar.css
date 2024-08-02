@@ -1,0 +1,19 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.search-bar .icon {
+  color: var(--primary);
+}
+.search-bar input {
+  border: none;
+  padding: 5px;
+}
+.search-bar input:focus {
+  outline: none;
+}

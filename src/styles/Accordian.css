@@ -1,0 +1,45 @@
+/* Basic styling for the accordion */
+.accordion {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--bg);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.accordion-title {
+  font-size: 14px;
+}
+
+.accordion-arrow {
+  transition: transform 0.3s ease;
+  color: var(--primary);
+}
+
+/* Styling for the accordion content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+}
+
+/* When the accordion is expanded, rotate the arrow */
+.accordion-button.active .accordion-arrow {
+  transform: rotate(180deg); /* Rotate the arrow 90 degrees */
+}
+
+/* When the accordion is expanded, show the content */
+.accordion-button.active + .accordion-content {
+  max-height: fit-content;
+}
