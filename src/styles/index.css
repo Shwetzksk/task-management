@@ -1,0 +1,27 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --primary: #034ea2;
+  --text: #231f20;
+  --hover: #f7f7f7;
+  --pending: #d0d0d0;
+  --in-progress: #ffb03c;
+  --completed: #368a04;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 0;
+  padding: 10px 20px;
+}
+.btn .btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn .btn-outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
