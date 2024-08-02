@@ -25,7 +25,7 @@ function App() {
       );
     }
     return tasks;
-  }, [search]);
+  }, [search, tasks]);
   const inProgress = useMemo(() => {
     return filteredTask.filter((task) => task.status === "in-progress");
   }, [filteredTask]);
