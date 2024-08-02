@@ -38,7 +38,6 @@ function App() {
   const [edit, setEdit] = useState({ ...initialData });
   const [add, setAdd] = useState(false);
 
-  console.log(tasks);
   return (
     <section>
       {add ? <CreateTaskForm open={add} onClose={() => setAdd(false)} /> : null}
@@ -61,19 +60,19 @@ function App() {
             <SearchBar />
             <Accordian title={`In Progress (${inProgress.length})`}>
               {inProgress.map((task) => (
-                <TaskItem {...task} onEdit={setEdit} />
+                <TaskItem key={task.id} {...task} onEdit={setEdit} />
               ))}
               {!inProgress.length ? <p>No data</p> : null}
             </Accordian>
             <Accordian title={`Pending (${pending.length})`}>
               {pending.map((task) => (
-                <TaskItem {...task} onEdit={setEdit} />
+                <TaskItem key={task.id} {...task} onEdit={setEdit} />
               ))}
               {!pending.length ? <p>No data</p> : null}
             </Accordian>{" "}
             <Accordian title={`Completed (${completed.length})`}>
               {completed.map((task) => (
-                <TaskItem {...task} onEdit={setEdit} />
+                <TaskItem key={task.id} {...task} onEdit={setEdit} />
               ))}
               {!completed.length ? <p>No data</p> : null}
             </Accordian>
